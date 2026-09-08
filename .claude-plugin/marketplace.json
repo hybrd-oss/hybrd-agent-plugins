@@ -1,0 +1,18 @@
+{
+  "name": "hybrd",
+  "owner": {
+    "name": "HYBRD Inc",
+    "email": "support@hybrd.com",
+    "url": "https://www.hybrd.com"
+  },
+  "metadata": {
+    "description": "Official HYBRD plugins for Claude Code."
+  },
+  "plugins": [
+    {
+      "name": "hybrd",
+      "source": "./plugins/claude-code",
+      "description": "The easiest way to manage and execute your training."
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "name": "hybrd",
+  "owner": {
+    "name": "HYBRD Inc",
+    "email": "support@hybrd.com"
+  },
+  "metadata": {
+    "description": "Official HYBRD plugins for coding agents."
+  },
+  "plugins": [
+    {
+      "name": "hybrd",
+      "source": "plugins/cursor",
+      "description": "The easiest way to manage and execute your training."
+    }
+  ]
+}
