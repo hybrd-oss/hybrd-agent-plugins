@@ -19,8 +19,3 @@ Use HYBRD MCP only after the athlete has completed the HYBRD OAuth sign-in in Cl
 - Verify the connection with `get_account` before saying HYBRD is connected or using athlete data. Do not claim success unless `get_account` succeeds.
 - HYBRD MCP grants your agent profile and workout read/write access. Integration read/write access is coming soon.
 - If HYBRD tools are unavailable after sign-in, ask the athlete to reconnect or reload Claude Code, then verify with `get_account`.
-
-## Tool use
-
-- Use only the signed-in athlete's HYBRD data.
-- After a successful write, report exactly what changed and any relevant HYBRD response.

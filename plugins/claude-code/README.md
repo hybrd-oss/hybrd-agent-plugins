@@ -79,10 +79,6 @@ claude plugin validate ./plugins/claude-code
 
 Complete OAuth and verify with `get_account` before testing any athlete data.
 
-## Safety
-
-- Use only the signed-in athlete's HYBRD data.
-
 ## Support
 
 For help, visit [HYBRD Support](https://www.hybrd.com/support). Review the [Privacy Policy](https://www.hybrd.com/privacy) and [Terms](https://www.hybrd.com/terms).
