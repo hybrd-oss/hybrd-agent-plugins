@@ -4,7 +4,7 @@ Connect Claude Code to HYBRD through HYBRD MCP to manage and execute your fitnes
 
 Learn more about HYBRD MCP at [hybrd.com/mcp](https://www.hybrd.com/mcp).
 
-This plugin lives in the [HYBRD agent plugins](https://github.com/hybrd-oss/hybrd-cursor-plugin) monorepo. See the [Cursor plugin](../cursor/README.md) for the Cursor package.
+This plugin lives in the [HYBRD agent plugins](https://github.com/hybrd-oss/hybrd-agent-plugins) monorepo. See the [Cursor plugin](../cursor/README.md) for the Cursor package.
 
 ## Why use it
 
@@ -15,7 +15,7 @@ HYBRD MCP brings your fitness plan, workout history and logger, profile, and wea
 - Create and manage fitness plans and structured workouts when the live MCP tools support it.
 - Use workout history, logging, and wearable context to make training decisions.
 - Track lifting and running in HYBRD, or complete workouts on an Apple Watch, Garmin, and other connected devices.
-- Verify the connected account before using athlete data, then clearly report any confirmed change.
+- Verify the connected account before using athlete data, then clearly report any change.
 
 The live MCP tool catalog and schemas are authoritative: use the tools Claude Code discovers for the connected account rather than assuming a fixed capability set.
 
@@ -31,14 +31,14 @@ HYBRD MCP grants your agent profile and workout read/write access. Integration r
 Add the HYBRD marketplace, then install the plugin:
 
 ```sh
-claude plugin marketplace add hybrd-oss/hybrd-cursor-plugin
+claude plugin marketplace add hybrd-oss/hybrd-agent-plugins
 claude plugin install hybrd@hybrd
 ```
 
 In Claude Code you can also run:
 
 ```shell
-/plugin marketplace add hybrd-oss/hybrd-cursor-plugin
+/plugin marketplace add hybrd-oss/hybrd-agent-plugins
 /plugin install hybrd@hybrd
 ```
 
@@ -78,12 +78,6 @@ claude plugin validate ./plugins/claude-code
 ```
 
 Complete OAuth and verify with `get_account` before testing any athlete data.
-
-## Safety
-
-- Treat live MCP tool discovery and schemas as the source of truth.
-- Before changing a workout, profile fact, or benchmark, summarize the change and obtain confirmation in the current conversation.
-- Use only the signed-in athlete's HYBRD data.
 
 ## Support
 
