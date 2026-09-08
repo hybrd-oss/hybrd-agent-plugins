@@ -24,12 +24,9 @@ const render = (template, vars) =>
 const providers = [
   {
     product: 'Cursor',
-    extraFrontmatter: '',
-    enableStep: "Confirm that the HYBRD MCP server is enabled in Cursor's Customize view.",
     mcpFields: {},
     mcpPath: 'plugins/cursor/mcp.json',
     skillPath: 'plugins/cursor/skills/hybrd-mcp/SKILL.md',
-    connectPath: 'plugins/cursor/commands/connect-hybrd.md',
     manifestPath: 'plugins/cursor/.cursor-plugin/plugin.json',
     manifestFields: {
       logo: 'assets/hybrd-mark.png',
@@ -40,12 +37,9 @@ const providers = [
   },
   {
     product: 'Claude Code',
-    extraFrontmatter: 'disable-model-invocation: true\n',
-    enableStep: 'Confirm that the HYBRD plugin is enabled and that Claude Code has approved the HYBRD MCP server.',
     mcpFields: { type: 'http' },
     mcpPath: 'plugins/claude-code/.mcp.json',
     skillPath: 'plugins/claude-code/skills/hybrd-mcp/SKILL.md',
-    connectPath: 'plugins/claude-code/skills/connect-hybrd/SKILL.md',
     manifestPath: 'plugins/claude-code/.claude-plugin/plugin.json',
     manifestFields: {
       displayName: policy.displayName,
@@ -54,14 +48,12 @@ const providers = [
 ];
 
 const skillTemplate = readText('shared/hybrd-mcp.SKILL.md');
-const connectTemplate = readText('shared/connect-hybrd.md');
 
 export const generatedFiles = () => {
   for (const phrase of SAFETY_PHRASES) {
     assertIncludes(skillTemplate, phrase, `Shared HYBRD skill template is missing safety copy: ${phrase}`);
   }
   assertIncludes(skillTemplate, 'get_account', 'Shared HYBRD skill template must require get_account.');
-  assertIncludes(connectTemplate, 'get_account', 'Shared connect template must require get_account.');
 
   const files = {};
 
@@ -70,11 +62,6 @@ export const generatedFiles = () => {
     assert(existing.version, `${provider.manifestPath} must keep a provider-specific version.`);
 
     files[provider.skillPath] = render(skillTemplate, { product: provider.product });
-    files[provider.connectPath] = render(connectTemplate, {
-      product: provider.product,
-      extraFrontmatter: provider.extraFrontmatter,
-      enableStep: provider.enableStep,
-    });
     files[provider.mcpPath] = toJson({
       mcpServers: {
         hybrd: {
@@ -113,7 +100,7 @@ export const sync = ({ check = false, stage = false } = {}) => {
       stale.length === 0,
       `Generated plugin files are stale. Run npm run sync.\n${stale.map(([path]) => `- ${path}`).join('\n')}`,
     );
-    console.log('HYBRD provider plugins match shared source.');
+    console.log('HYBRD skills match shared source.');
     return files;
   }
 
@@ -130,7 +117,7 @@ export const sync = ({ check = false, stage = false } = {}) => {
     assert(result.status === 0, 'Failed to stage generated plugin files.');
   }
 
-  console.log(`Copied shared plugin source into ${Object.keys(files).length} files.`);
+  console.log(`Copied shared skills into ${Object.keys(files).length} files.`);
   return files;
 };
 
