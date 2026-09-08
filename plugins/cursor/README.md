@@ -22,20 +22,19 @@ The live MCP tool catalog and schemas are authoritative: use the tools Cursor di
 ## What it includes
 
 - A remote MCP server configuration for `https://mcp.hybrd.com/mcp`.
-- A HYBRD skill for safe account verification and workout/profile workflows.
-- A `/connect-hybrd` command that guides OAuth sign-in and verifies the connected account.
+- A HYBRD skill for account verification and workout/profile workflows.
 
 HYBRD MCP grants your agent profile and workout read/write access. Integration read/write access is coming soon.
 
 ## Install
 
-Once this plugin is available in Cursor Marketplace, open **Customize**, find **HYBRD**, and install it at user or project scope. Enable the HYBRD MCP server, complete the HYBRD OAuth sign-in in your browser, then run `/connect-hybrd`.
+Once this plugin is available in Cursor Marketplace, open **Customize**, find **HYBRD**, and install it at user or project scope. Enable the HYBRD MCP server and complete the HYBRD OAuth sign-in in your browser.
 
 Sign in to HYBRD during connection to create or access your account. The iPhone app is not required.
 
 ## Verify
 
-Run `/connect-hybrd`. It completes only when the MCP `get_account` tool returns successfully. If the tool is not available after sign-in, reload Cursor or reconnect the HYBRD MCP server and try again.
+Call `get_account`. Connection is confirmed only when that tool returns successfully. If the tool is not available after sign-in, reload Cursor or reconnect the HYBRD MCP server and try again.
 
 ## Local development
 
@@ -46,7 +45,7 @@ mkdir -p ~/.cursor/plugins/local
 ln -s "$(pwd)/plugins/cursor" ~/.cursor/plugins/local/hybrd
 ```
 
-Reload Cursor, open **Customize**, and confirm that the HYBRD MCP server, `hybrd-mcp` skill, and `/connect-hybrd` command are present. Complete OAuth and verify with `get_account` before testing any athlete data.
+Reload Cursor, open **Customize**, and confirm that the HYBRD MCP server and `hybrd-mcp` skill are present. Complete OAuth and verify with `get_account` before testing any athlete data.
 
 Validate this package from the repository root with:
 

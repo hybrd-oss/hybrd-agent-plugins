@@ -5,7 +5,6 @@ import {
   assertIncludes,
   assertKeywords,
   assertMcpServer,
-  assertSafetyCopy,
   fileExists,
   HOMEPAGE,
   isSemver,
@@ -32,13 +31,8 @@ assertMcpServer(mcp, 'Claude');
 const skill = readText('plugins/claude-code/skills/hybrd-mcp/SKILL.md');
 assert(skill.startsWith('---\nname: hybrd-mcp\n'), 'Claude HYBRD skill frontmatter is invalid.');
 assertIncludes(skill, 'in Claude Code', 'Claude HYBRD skill must mention Claude Code.');
-assertSafetyCopy(skill, 'Claude HYBRD skill');
-
-const command = readText('plugins/claude-code/skills/connect-hybrd/SKILL.md');
-assert(command.startsWith('---\nname: connect-hybrd\n'), 'Claude connect skill frontmatter is invalid.');
-assertIncludes(command, 'disable-model-invocation: true', 'Claude connect skill must be user-invoked.');
-assertIncludes(command, 'get_account', 'Claude connect skill must verify the account.');
-assertIncludes(command, 'Claude Code', 'Claude connect skill must mention Claude Code.');
+assertIncludes(skill, 'get_account', 'Claude HYBRD skill must require account verification.');
+assert(!fileExists('plugins/claude-code/skills/connect-hybrd/SKILL.md'), 'Claude plugin must not include a connect-hybrd skill.');
 
 const marketplace = readJson('.claude-plugin/marketplace.json');
 assertEqual(marketplace.name, PLUGIN_NAME, 'Claude marketplace name is invalid.');

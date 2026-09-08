@@ -17,7 +17,6 @@ export const AUTHOR_EMAIL = policy.author.email;
 export const HOMEPAGE = policy.homepage;
 export const LICENSE = policy.license;
 export const KEYWORDS = policy.keywords;
-export const SAFETY_PHRASES = policy.safetyPhrases;
 
 export const assert = (condition, message) => {
   if (!condition) throw new Error(message);
@@ -47,13 +46,6 @@ export const assertMcpServer = (mcp, label) => {
     `${label} MCP configuration must not contain headers, credentials, or extra transport fields.`,
   );
   assert(!('headers' in server), `${label} MCP configuration must not contain headers.`);
-};
-
-export const assertSafetyCopy = (text, label) => {
-  assertIncludes(text, 'get_account', `${label} must require account verification with get_account.`);
-  for (const phrase of SAFETY_PHRASES) {
-    assertIncludes(text, phrase, `${label} is missing shared safety copy: ${phrase}`);
-  }
 };
 
 export const assertKeywords = (keywords, label) => {

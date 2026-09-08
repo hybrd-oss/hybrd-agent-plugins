@@ -12,10 +12,7 @@ const cursorSkill = readText('plugins/cursor/skills/hybrd-mcp/SKILL.md');
 const claudeSkill = readText('plugins/claude-code/skills/hybrd-mcp/SKILL.md');
 assert(cursorSkill.includes('in Cursor'), 'Cursor skill lost its Cursor wording.');
 assert(claudeSkill.includes('in Claude Code'), 'Claude skill lost its Claude Code wording.');
-
-const cursorConnect = readText('plugins/cursor/commands/connect-hybrd.md');
-const claudeConnect = readText('plugins/claude-code/skills/connect-hybrd/SKILL.md');
-assert(cursorConnect.includes('get_account'), 'Cursor connect command must require get_account.');
-assert(claudeConnect.includes('get_account'), 'Claude connect skill must require get_account.');
+assert(cursorSkill.includes('get_account'), 'Cursor skill must require get_account.');
+assert(claudeSkill.includes('get_account'), 'Claude skill must require get_account.');
 
 console.log('HYBRD provider plugins are in sync.');

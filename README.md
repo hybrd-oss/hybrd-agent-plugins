@@ -12,7 +12,7 @@ The [HYBRD Cursor Plugin](plugins/cursor) connects Cursor to HYBRD MCP so you ca
 
 - Marketplace manifest: `.cursor-plugin/marketplace.json`
 - Plugin directory: `plugins/cursor`
-- Command: `/connect-hybrd`
+- Skill: `hybrd-mcp`
 
 See the [Cursor plugin README](plugins/cursor/README.md) for install, verification, and local development.
 
@@ -22,7 +22,7 @@ The [HYBRD Claude Code Plugin](plugins/claude-code) connects Claude Code to HYBR
 
 - Marketplace manifest: `.claude-plugin/marketplace.json`
 - Plugin directory: `plugins/claude-code`
-- Skill: `/hybrd:connect-hybrd`
+- Skill: `hybrd-mcp`
 
 See the [Claude Code plugin README](plugins/claude-code/README.md) for install, verification, and local development.
 
@@ -35,8 +35,7 @@ HYBRD MCP brings your fitness plan, workout history and logger, profile, and wea
 Each provider plugin ships:
 
 - A remote MCP server configuration for `https://mcp.hybrd.com/mcp`.
-- A HYBRD skill for safe account verification and workout/profile workflows.
-- A connect command or skill that guides OAuth sign-in and verifies the connected account.
+- A HYBRD skill for account verification and workout/profile workflows.
 
 HYBRD MCP grants your agent profile and workout read/write access. Integration read/write access is coming soon.
 
@@ -63,9 +62,9 @@ npm run sync
 
 A pre-commit hook runs that copy step and stages the generated skill files. Enable the hook once with `npm run prepare`, or `git config core.hooksPath .githooks`. CI still fails if generated skills are stale.
 
-Connect commands, READMEs, and other provider prose can differ and are not overwritten.
+READMEs and other provider prose can differ and are not overwritten.
 
-Validate every provider package and the shared safety rules with:
+Validate every provider package with:
 
 ```sh
 npm run validate

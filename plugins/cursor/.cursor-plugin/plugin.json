@@ -20,6 +20,5 @@
   ],
   "logo": "assets/hybrd-mark.png",
   "mcpServers": "./mcp.json",
-  "skills": "./skills",
-  "commands": "./commands"
+  "skills": "./skills"
 }

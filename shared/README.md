@@ -15,4 +15,4 @@ A pre-commit hook runs the same copy step. CI fails if the generated skill files
 | `hybrd-mcp.SKILL.md` | Both `skills/hybrd-mcp/SKILL.md` files |
 | `policy.json` | Plugin manifests and MCP URLs |
 
-Connect commands, install docs, and other provider prose stay in each plugin directory and are not overwritten.
+Install docs and other provider prose stay in each plugin directory and are not overwritten.

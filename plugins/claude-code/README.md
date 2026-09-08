@@ -22,8 +22,7 @@ The live MCP tool catalog and schemas are authoritative: use the tools Claude Co
 ## What it includes
 
 - A remote MCP server configuration for `https://mcp.hybrd.com/mcp`.
-- A HYBRD skill for safe account verification and workout/profile workflows.
-- A `/hybrd:connect-hybrd` skill that guides OAuth sign-in and verifies the connected account.
+- A HYBRD skill for account verification and workout/profile workflows.
 
 HYBRD MCP grants your agent profile and workout read/write access. Integration read/write access is coming soon.
 
@@ -43,13 +42,13 @@ In Claude Code you can also run:
 /plugin install hybrd@hybrd
 ```
 
-Enable the plugin, approve the HYBRD MCP server if Claude Code prompts for it, complete the HYBRD OAuth sign-in in your browser, then run `/hybrd:connect-hybrd`.
+Enable the plugin, approve the HYBRD MCP server if Claude Code prompts for it, then complete the HYBRD OAuth sign-in in your browser.
 
 Sign in to HYBRD during connection to create or access your account. The iPhone app is not required.
 
 ## Verify
 
-Run `/hybrd:connect-hybrd`. It completes only when the MCP `get_account` tool returns successfully. If the tool is not available after sign-in, reload Claude Code or reconnect the HYBRD MCP server and try again.
+Call `get_account`. Connection is confirmed only when that tool returns successfully. If the tool is not available after sign-in, reload Claude Code or reconnect the HYBRD MCP server and try again.
 
 ## Local development
 

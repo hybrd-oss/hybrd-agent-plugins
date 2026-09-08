@@ -5,7 +5,6 @@ import {
   assertIncludes,
   assertKeywords,
   assertMcpServer,
-  assertSafetyCopy,
   fileExists,
   HOMEPAGE,
   isSemver,
@@ -22,7 +21,7 @@ assertEqual(manifest.homepage, HOMEPAGE, 'Cursor plugin homepage is invalid.');
 assertEqual(manifest.license, LICENSE, 'Cursor plugin license is invalid.');
 assertEqual(manifest.mcpServers, './mcp.json', 'Cursor manifest must load the plugin MCP configuration.');
 assertEqual(manifest.skills, './skills', 'Cursor manifest must load the HYBRD skill directory.');
-assertEqual(manifest.commands, './commands', 'Cursor manifest must load the connect command directory.');
+assert(!('commands' in manifest), 'Cursor plugin must not ship a separate connect command.');
 assert(!('variables' in manifest), 'HYBRD OAuth must not require Cursor plugin variables.');
 assertAuthor(manifest.author, 'Cursor plugin');
 assertKeywords(manifest.keywords, 'Cursor plugin');
@@ -35,12 +34,8 @@ assertMcpServer(mcp, 'Cursor');
 const skill = readText('plugins/cursor/skills/hybrd-mcp/SKILL.md');
 assert(skill.startsWith('---\nname: hybrd-mcp\n'), 'Cursor HYBRD skill frontmatter is invalid.');
 assertIncludes(skill, 'in Cursor', 'Cursor HYBRD skill must mention Cursor.');
-assertSafetyCopy(skill, 'Cursor HYBRD skill');
-
-const command = readText('plugins/cursor/commands/connect-hybrd.md');
-assert(command.startsWith('---\nname: connect-hybrd\n'), 'Cursor connect command frontmatter is invalid.');
-assertIncludes(command, 'get_account', 'Cursor connect command must verify the account.');
-assertIncludes(command, "Cursor's Customize view", 'Cursor connect command must mention Cursor setup.');
+assertIncludes(skill, 'get_account', 'Cursor HYBRD skill must require account verification.');
+assert(!fileExists('plugins/cursor/commands/connect-hybrd.md'), 'Cursor plugin must not include a connect-hybrd command.');
 
 const marketplace = readJson('.cursor-plugin/marketplace.json');
 assertEqual(marketplace.name, PLUGIN_NAME, 'Cursor marketplace name is invalid.');

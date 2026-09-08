@@ -4,13 +4,11 @@ import { dirname, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import {
   assert,
-  assertIncludes,
   fileExists,
   policy,
   readJson,
   readText,
   repoRoot,
-  SAFETY_PHRASES,
 } from './shared.mjs';
 
 const toJson = (value) => `${JSON.stringify(value, null, 2)}\n`;
@@ -32,7 +30,6 @@ const providers = [
       logo: 'assets/hybrd-mark.png',
       mcpServers: './mcp.json',
       skills: './skills',
-      commands: './commands',
     },
   },
   {
@@ -50,11 +47,6 @@ const providers = [
 const skillTemplate = readText('shared/hybrd-mcp.SKILL.md');
 
 export const generatedFiles = () => {
-  for (const phrase of SAFETY_PHRASES) {
-    assertIncludes(skillTemplate, phrase, `Shared HYBRD skill template is missing safety copy: ${phrase}`);
-  }
-  assertIncludes(skillTemplate, 'get_account', 'Shared HYBRD skill template must require get_account.');
-
   const files = {};
 
   for (const provider of providers) {

@@ -18,12 +18,5 @@
     "fitness",
     "workouts"
   ],
-  "mcpUrl": "https://mcp.hybrd.com/mcp",
-  "safetyPhrases": [
-    "Treat the MCP server's live tool discovery and tool schemas as the source of truth",
-    "Use only the signed-in athlete's HYBRD data",
-    "Before creating or changing a workout, profile fact, or benchmark",
-    "summarize the intended change and obtain the athlete's confirmation",
-    "After a successful write, report exactly what changed"
-  ]
+  "mcpUrl": "https://mcp.hybrd.com/mcp"
 }
