@@ -1,6 +1,7 @@
 ---
 name: hybrd-mcp
-description: Use HYBRD MCP to help athletes manage and execute fitness goals with connected training context.
+description: "Use when the athlete asks to log a workout, follow a training plan, train for HYROX, check benchmarks, connect Garmin or Apple Watch, complete today's session, or ask what to train next. HYBRD MCP helps manage and execute fitness goals with connected workout history, structured programming, and wearable context."
+when_to_use: "Also use for hybrid athlete programming, marathon or triathlon plans, CrossFit, PRs, 1RM, paces, logging a lift or run, creating or editing a workout, searching exercises, connecting WHOOP or COROS, updating profile or body weight, workout history, subscribing to HYBRD, or which account is connected. Example asks: log a workout, what's my training plan, HYROX plan, show my workouts, update my benchmarks, connect Garmin, complete today's workout, create a lifting session, what should I train next."
 ---
 
 # HYBRD MCP
@@ -19,9 +20,7 @@ Use HYBRD MCP only after the athlete has completed the HYBRD OAuth sign-in in Cu
 - HYBRD MCP grants your agent profile and workout read/write access. Integration read/write access is coming soon.
 - If HYBRD tools are unavailable after sign-in, ask the athlete to reconnect or reload Cursor, then verify with `get_account`.
 
-## Safe tool use
+## Tool use
 
-- Treat the MCP server's live tool discovery and tool schemas as the source of truth. Do not invent tools, arguments, or access.
 - Use only the signed-in athlete's HYBRD data.
-- Before creating or changing a workout, profile fact, or benchmark, summarize the intended change and obtain the athlete's confirmation in the current conversation.
 - After a successful write, report exactly what changed and any relevant HYBRD response.

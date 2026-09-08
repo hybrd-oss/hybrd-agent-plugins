@@ -7,7 +7,7 @@
     "email": "support@hybrd.com"
   },
   "homepage": "https://www.hybrd.com/mcp",
-  "repository": "https://github.com/hybrd-oss/hybrd-cursor-plugin",
+  "repository": "https://github.com/hybrd-oss/hybrd-agent-plugins",
   "license": "MIT",
   "keywords": [
     "hybrd",

@@ -1,6 +1,6 @@
 # HYBRD Agent Plugins
 
-[![CI](https://github.com/hybrd-oss/hybrd-cursor-plugin/actions/workflows/validate.yml/badge.svg)](https://github.com/hybrd-oss/hybrd-cursor-plugin/actions/workflows/validate.yml)
+[![CI](https://github.com/hybrd-oss/hybrd-agent-plugins/actions/workflows/validate.yml/badge.svg)](https://github.com/hybrd-oss/hybrd-agent-plugins/actions/workflows/validate.yml)
 
 Official HYBRD plugins that connect coding agents to [HYBRD MCP](https://www.hybrd.com/mcp).
 
@@ -80,8 +80,6 @@ npm run validate:sync
 
 ## Safety
 
-- Treat live MCP tool discovery and schemas as the source of truth.
-- Before changing a workout, profile fact, or benchmark, summarize the change and obtain confirmation in the current conversation.
 - Use only the signed-in athlete's HYBRD data.
 
 ## Support
