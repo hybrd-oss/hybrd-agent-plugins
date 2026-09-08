@@ -55,6 +55,14 @@ claude --plugin-dir ./plugins/claude-code
 
 Do not symlink or pass the repository root as a plugin directory. Cursor and Claude Code both expect the individual plugin folder that contains the provider manifest.
 
+Shared MCP, skill, and safety copy live in `shared/`. Copy them into every provider plugin with:
+
+```sh
+npm run sync
+```
+
+A pre-commit hook runs that copy step and stages the generated plugin files. Enable the hook once with `npm run prepare`, or `git config core.hooksPath .githooks`. CI still fails if generated files are stale.
+
 Validate every provider package and the shared safety rules with:
 
 ```sh

@@ -1,0 +1,29 @@
+{
+  "name": "hybrd",
+  "displayName": "HYBRD",
+  "description": "The easiest way to manage and execute your training.",
+  "author": {
+    "name": "HYBRD Inc",
+    "email": "support@hybrd.com"
+  },
+  "homepage": "https://www.hybrd.com/mcp",
+  "repository": "https://github.com/hybrd-oss/hybrd-cursor-plugin",
+  "license": "MIT",
+  "keywords": [
+    "hybrd",
+    "mcp",
+    "hybrid athlete",
+    "training",
+    "training program",
+    "fitness",
+    "workouts"
+  ],
+  "mcpUrl": "https://mcp.hybrd.com/mcp",
+  "safetyPhrases": [
+    "Treat the MCP server's live tool discovery and tool schemas as the source of truth",
+    "Use only the signed-in athlete's HYBRD data",
+    "Before creating or changing a workout, profile fact, or benchmark",
+    "summarize the intended change and obtain the athlete's confirmation",
+    "After a successful write, report exactly what changed"
+  ]
+}

@@ -5,33 +5,19 @@ import { fileURLToPath } from 'node:url';
 const scriptsDir = dirname(fileURLToPath(import.meta.url));
 export const repoRoot = resolve(scriptsDir, '..');
 
-export const MCP_URL = 'https://mcp.hybrd.com/mcp';
-export const PLUGIN_NAME = 'hybrd';
-export const AUTHOR_NAME = 'HYBRD Inc';
-export const AUTHOR_EMAIL = 'support@hybrd.com';
-export const HOMEPAGE = 'https://www.hybrd.com/mcp';
-export const LICENSE = 'MIT';
-export const KEYWORDS = [
-  'hybrd',
-  'mcp',
-  'hybrid athlete',
-  'training',
-  'training program',
-  'fitness',
-  'workouts',
-];
-
-export const SAFETY_PHRASES = [
-  "Treat the MCP server's live tool discovery and tool schemas as the source of truth",
-  "Use only the signed-in athlete's HYBRD data",
-  'Before creating or changing a workout, profile fact, or benchmark',
-  "summarize the intended change and obtain the athlete's confirmation",
-  'After a successful write, report exactly what changed',
-];
-
 export const readJson = (path) => JSON.parse(readFileSync(resolve(repoRoot, path), 'utf8'));
 export const readText = (path) => readFileSync(resolve(repoRoot, path), 'utf8');
 export const fileExists = (path) => existsSync(resolve(repoRoot, path));
+
+export const policy = readJson('shared/policy.json');
+export const MCP_URL = policy.mcpUrl;
+export const PLUGIN_NAME = policy.name;
+export const AUTHOR_NAME = policy.author.name;
+export const AUTHOR_EMAIL = policy.author.email;
+export const HOMEPAGE = policy.homepage;
+export const LICENSE = policy.license;
+export const KEYWORDS = policy.keywords;
+export const SAFETY_PHRASES = policy.safetyPhrases;
 
 export const assert = (condition, message) => {
   if (!condition) throw new Error(message);

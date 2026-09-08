@@ -3,6 +3,9 @@
   "private": true,
   "version": "1.0.0",
   "scripts": {
+    "prepare": "node scripts/install-hooks.mjs",
+    "sync": "node scripts/sync-plugins.mjs",
+    "sync:check": "node scripts/sync-plugins.mjs --check",
     "validate": "node scripts/validate.mjs",
     "validate:cursor": "node scripts/validate-cursor.mjs",
     "validate:claude": "node scripts/validate-claude.mjs",
