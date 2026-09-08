@@ -6,16 +6,6 @@ Official HYBRD plugins that connect coding agents to [HYBRD MCP](https://www.hyb
 
 This repository is a monorepo of provider plugins. Each plugin is a standalone package with its own manifest, MCP configuration, and install path.
 
-## HYBRD Cursor Plugin
-
-The [HYBRD Cursor Plugin](plugins/cursor) connects Cursor to HYBRD MCP so you can manage and execute training from Cursor.
-
-- Marketplace manifest: `.cursor-plugin/marketplace.json`
-- Plugin directory: `plugins/cursor`
-- Skill: `hybrd-mcp`
-
-See the [Cursor plugin README](plugins/cursor/README.md) for install, verification, and local development.
-
 ## HYBRD Claude Code Plugin
 
 The [HYBRD Claude Code Plugin](plugins/claude-code) connects Claude Code to HYBRD MCP so you can manage and execute training from Claude Code.
@@ -25,6 +15,16 @@ The [HYBRD Claude Code Plugin](plugins/claude-code) connects Claude Code to HYBR
 - Skill: `hybrd-mcp`
 
 See the [Claude Code plugin README](plugins/claude-code/README.md) for install, verification, and local development.
+
+## HYBRD Cursor Plugin
+
+The [HYBRD Cursor Plugin](plugins/cursor) connects Cursor to HYBRD MCP so you can manage and execute training from Cursor.
+
+- Marketplace manifest: `.cursor-plugin/marketplace.json`
+- Plugin directory: `plugins/cursor`
+- Skill: `hybrd-mcp`
+
+See the [Cursor plugin README](plugins/cursor/README.md) for install, verification, and local development.
 
 ## Why use HYBRD MCP
 
@@ -44,12 +44,12 @@ HYBRD MCP grants your agent profile and workout read/write access. Integration r
 Clone this repository, then load the provider directory you are changing:
 
 ```sh
+# Claude Code
+claude --plugin-dir ./plugins/claude-code
+
 # Cursor
 mkdir -p ~/.cursor/plugins/local
 ln -s "$(pwd)/plugins/cursor" ~/.cursor/plugins/local/hybrd
-
-# Claude Code
-claude --plugin-dir ./plugins/claude-code
 ```
 
 Do not symlink or pass the repository root as a plugin directory. Cursor and Claude Code both expect the individual plugin folder that contains the provider manifest.
@@ -73,8 +73,8 @@ npm run validate
 Provider-specific checks:
 
 ```sh
-npm run validate:cursor
 npm run validate:claude
+npm run validate:cursor
 npm run validate:sync
 ```
 
