@@ -1,57 +1,72 @@
-# HYBRD Cursor Plugin
+# HYBRD Agent Plugins
 
 [![CI](https://github.com/hybrd-oss/hybrd-cursor-plugin/actions/workflows/validate.yml/badge.svg)](https://github.com/hybrd-oss/hybrd-cursor-plugin/actions/workflows/validate.yml)
 
-Connect Cursor to HYBRD through HYBRD MCP to manage and execute your fitness goals.
+Official HYBRD plugins that connect coding agents to [HYBRD MCP](https://www.hybrd.com/mcp).
 
-Learn more about HYBRD MCP at [hybrd.com/mcp](https://www.hybrd.com/mcp).
+This repository is a monorepo of provider plugins. Each plugin is a standalone package with its own manifest, MCP configuration, and install path.
 
-## Why use it
+## HYBRD Cursor Plugin
+
+The [HYBRD Cursor Plugin](plugins/cursor) connects Cursor to HYBRD MCP so you can manage and execute training from Cursor.
+
+- Marketplace manifest: `.cursor-plugin/marketplace.json`
+- Plugin directory: `plugins/cursor`
+- Command: `/connect-hybrd`
+
+See the [Cursor plugin README](plugins/cursor/README.md) for install, verification, and local development.
+
+## HYBRD Claude Code Plugin
+
+The [HYBRD Claude Code Plugin](plugins/claude-code) connects Claude Code to HYBRD MCP so you can manage and execute training from Claude Code.
+
+- Marketplace manifest: `.claude-plugin/marketplace.json`
+- Plugin directory: `plugins/claude-code`
+- Skill: `/hybrd:connect-hybrd`
+
+See the [Claude Code plugin README](plugins/claude-code/README.md) for install, verification, and local development.
+
+## Why use HYBRD MCP
 
 HYBRD MCP brings your fitness plan, workout history and logger, profile, and wearable connections into one place. It helps you get guidance grounded in your real training, ask better questions about what to do next, and turn recommendations into structured workouts and programming. As you complete training, HYBRD automatically adapts the weights and paces prescribed in future sessions.
 
-## What you can use it for
-
-- Create and manage fitness plans and structured workouts when the live MCP tools support it.
-- Use workout history, logging, and wearable context to make training decisions.
-- Track lifting and running in HYBRD, or complete workouts on an Apple Watch, Garmin, and other connected devices.
-- Verify the connected account before using athlete data, then clearly report any confirmed change.
-
-The live MCP tool catalog and schemas are authoritative: use the tools Cursor discovers for the connected account rather than assuming a fixed capability set.
-
 ## What it includes
+
+Each provider plugin ships:
 
 - A remote MCP server configuration for `https://mcp.hybrd.com/mcp`.
 - A HYBRD skill for safe account verification and workout/profile workflows.
-- A `/connect-hybrd` command that guides OAuth sign-in and verifies the connected account.
+- A connect command or skill that guides OAuth sign-in and verifies the connected account.
 
 HYBRD MCP grants your agent profile and workout read/write access. Integration read/write access is coming soon.
 
-## Install
-
-Once this plugin is available in Cursor Marketplace, open **Customize**, find **HYBRD**, and install it at user or project scope. Enable the HYBRD MCP server, complete the HYBRD OAuth sign-in in your browser, then run `/connect-hybrd`.
-
-Sign in to HYBRD during connection to create or access your account. The iPhone app is not required.
-
-## Verify
-
-Run `/connect-hybrd`. It completes only when the MCP `get_account` tool returns successfully. If the tool is not available after sign-in, reload Cursor or reconnect the HYBRD MCP server and try again.
-
 ## Local development
 
-Clone this repository, then install it into Cursor's local plugin directory:
+Clone this repository, then load the provider directory you are changing:
 
 ```sh
+# Cursor
 mkdir -p ~/.cursor/plugins/local
-ln -s "$(pwd)" ~/.cursor/plugins/local/hybrd
+ln -s "$(pwd)/plugins/cursor" ~/.cursor/plugins/local/hybrd
+
+# Claude Code
+claude --plugin-dir ./plugins/claude-code
 ```
 
-Reload Cursor, open **Customize**, and confirm that the HYBRD MCP server, `hybrd-mcp` skill, and `/connect-hybrd` command are present. Complete OAuth and verify with `get_account` before testing any athlete data.
+Do not symlink or pass the repository root as a plugin directory. Cursor and Claude Code both expect the individual plugin folder that contains the provider manifest.
 
-Validate package structure with:
+Validate every provider package and the shared safety rules with:
 
 ```sh
 npm run validate
+```
+
+Provider-specific checks:
+
+```sh
+npm run validate:cursor
+npm run validate:claude
+npm run validate:sync
 ```
 
 ## Safety

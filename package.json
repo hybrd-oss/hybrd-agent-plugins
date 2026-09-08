@@ -1,9 +1,12 @@
 {
-  "name": "hybrd-cursor-plugin",
+  "name": "hybrd-agent-plugins",
   "private": true,
   "version": "1.0.0",
   "scripts": {
-    "validate": "node scripts/validate-plugin.mjs"
+    "validate": "node scripts/validate.mjs",
+    "validate:cursor": "node scripts/validate-cursor.mjs",
+    "validate:claude": "node scripts/validate-claude.mjs",
+    "validate:sync": "node scripts/validate-sync.mjs"
   },
   "engines": {
     "node": ">=20"
