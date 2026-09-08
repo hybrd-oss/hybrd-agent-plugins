@@ -43,7 +43,7 @@ assertIncludes(command, 'get_account', 'Cursor connect command must verify the a
 assertIncludes(command, "Cursor's Customize view", 'Cursor connect command must mention Cursor setup.');
 
 const marketplace = readJson('.cursor-plugin/marketplace.json');
-assertEqual(marketplace.name, 'hybrd-agent-plugins', 'Cursor marketplace name is invalid.');
+assertEqual(marketplace.name, PLUGIN_NAME, 'Cursor marketplace name is invalid.');
 assertAuthor(marketplace.owner, 'Cursor marketplace');
 assertEqual(marketplace.plugins?.length, 1, 'Cursor marketplace must list exactly one plugin.');
 assertEqual(marketplace.plugins[0].name, PLUGIN_NAME, 'Cursor marketplace plugin name is invalid.');
