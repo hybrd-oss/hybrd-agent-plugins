@@ -1,0 +1,49 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "hybrd",
+  "version": "1.0.0",
+  "description": "The easiest way to manage and execute your training.",
+  "author": {
+    "name": "HYBRD Inc",
+    "email": "support@hybrd.com",
+    "url": "https://www.hybrd.com"
+  },
+  "homepage": "https://www.hybrd.com/mcp",
+  "repository": "https://github.com/hybrd-oss/hybrd-agent-plugins",
+  "license": "MIT",
+  "keywords": [
+    "hybrd",
+    "mcp",
+    "hybrid athlete",
+    "training",
+    "training program",
+    "fitness",
+    "workouts"
+  ],
+  "extensions": {
+    "com.openai": {
+      "interface": {
+        "displayName": "HYBRD",
+        "shortDescription": "The easiest way to manage and execute your training.",
+        "longDescription": "Connect ChatGPT and Codex to HYBRD for authenticated workout history, training plans, profile data, and supported wearable workflows. Available tools and schemas come from the live HYBRD MCP server.",
+        "developerName": "HYBRD Inc",
+        "category": "Health & Fitness",
+        "capabilities": [
+          "Read",
+          "Write"
+        ],
+        "websiteURL": "https://www.hybrd.com",
+        "privacyPolicyURL": "https://www.hybrd.com/privacy",
+        "termsOfServiceURL": "https://www.hybrd.com/terms",
+        "defaultPrompt": [
+          "Show my training plan and tell me what to do next.",
+          "Summarize my recent workouts and recovery trends.",
+          "Create a workout that supports my current goal."
+        ],
+        "brandColor": "#1B5E20",
+        "composerIcon": "./assets/hybrd-mark.png",
+        "logo": "./assets/hybrd-mark.png"
+      }
+    }
+  }
+}
