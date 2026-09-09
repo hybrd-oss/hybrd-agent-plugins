@@ -46,6 +46,23 @@ const providers = [
 
 const skillTemplate = readText('shared/hybrd-mcp.SKILL.md');
 
+const openAiInterface = {
+  displayName: policy.displayName,
+  shortDescription: policy.description,
+  longDescription:
+    'Connect ChatGPT and Codex to HYBRD for authenticated workout history, training plans, profile data, and supported wearable workflows. Available tools and schemas come from the live HYBRD MCP server.',
+  developerName: policy.author.name,
+  category: 'Health & Fitness',
+  capabilities: policy.capabilities,
+  websiteURL: policy.website,
+  privacyPolicyURL: policy.privacyPolicyUrl,
+  termsOfServiceURL: policy.termsOfServiceUrl,
+  defaultPrompt: policy.defaultPrompts,
+  brandColor: policy.brandColor,
+  composerIcon: './assets/hybrd-mark.png',
+  logo: './assets/hybrd-mark.png',
+};
+
 export const generatedFiles = () => {
   const files = {};
 
@@ -75,6 +92,61 @@ export const generatedFiles = () => {
       ...Object.fromEntries(Object.entries(provider.manifestFields).filter(([key]) => key !== 'displayName')),
     });
   }
+
+  const openAiManifestPath = 'plugins/openai/plugin.json';
+  const openAiCompatibilityManifestPath = 'plugins/openai/.codex-plugin/plugin.json';
+  const openAiMcpPath = 'plugins/openai/mcp.json';
+  const openAiSkillPath = 'plugins/openai/skills/hybrd-mcp/SKILL.md';
+  const openAiExisting = readJson(openAiManifestPath);
+  assert(openAiExisting.version, `${openAiManifestPath} must keep a provider-specific version.`);
+
+  files[openAiSkillPath] = render(skillTemplate, { product: 'ChatGPT or Codex' });
+  files[openAiMcpPath] = toJson({
+    $schema: 'https://agent-plugins.org/schemas/1.0.0/mcp.schema.json',
+    mcpServers: {
+      hybrd: {
+        type: 'streamable-http',
+        url: policy.mcpUrl,
+      },
+    },
+  });
+  files[openAiManifestPath] = toJson({
+    $schema: 'https://agent-plugins.org/schemas/1.0.0/plugin.schema.json',
+    name: policy.name,
+    version: openAiExisting.version,
+    description: policy.description,
+    author: {
+      ...policy.author,
+      url: policy.website,
+    },
+    homepage: policy.homepage,
+    repository: policy.repository,
+    license: policy.license,
+    keywords: policy.keywords,
+    extensions: {
+      'com.openai': {
+        interface: openAiInterface,
+      },
+    },
+  });
+  files[openAiCompatibilityManifestPath] = toJson({
+    name: policy.name,
+    version: openAiExisting.version,
+    description: policy.description,
+    author: policy.author,
+    homepage: policy.homepage,
+    repository: policy.repository,
+    license: policy.license,
+    keywords: policy.keywords,
+    skills: './skills/',
+    mcpServers: {
+      hybrd: {
+        type: 'http',
+        url: policy.mcpUrl,
+      },
+    },
+    interface: openAiInterface,
+  });
 
   return files;
 };
@@ -109,7 +181,7 @@ export const sync = ({ check = false, stage = false } = {}) => {
     assert(result.status === 0, 'Failed to stage generated plugin files.');
   }
 
-  console.log(`Copied shared skills into ${Object.keys(files).length} files.`);
+  console.log(`Generated ${Object.keys(files).length} provider files.`);
   return files;
 };
 

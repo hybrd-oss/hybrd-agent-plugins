@@ -1,0 +1,20 @@
+{
+  "name": "hybrd",
+  "interface": {
+    "displayName": "HYBRD"
+  },
+  "plugins": [
+    {
+      "name": "hybrd",
+      "source": {
+        "source": "local",
+        "path": "./plugins/openai"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Health & Fitness"
+    }
+  ]
+}

@@ -3,6 +3,7 @@ import { resolve } from 'node:path';
 import { repoRoot } from './shared.mjs';
 
 const checks = [
+  'scripts/validate-openai.mjs',
   'scripts/validate-cursor.mjs',
   'scripts/validate-claude.mjs',
   'scripts/validate-sync.mjs',

@@ -6,6 +6,16 @@ Official HYBRD plugins that connect coding agents to [HYBRD MCP](https://www.hyb
 
 This repository is a monorepo of provider plugins. Each plugin is a standalone package with its own manifest, MCP configuration, and install path.
 
+## HYBRD ChatGPT and Codex Plugin
+
+The [HYBRD OpenAI Plugin](plugins/openai) connects ChatGPT and Codex to HYBRD MCP so you can manage and execute training from either product.
+
+- Marketplace manifest: `.agents/plugins/marketplace.json`
+- Plugin directory: `plugins/openai`
+- Skill: `hybrd-mcp`
+
+See the [OpenAI plugin README](plugins/openai/README.md) for installation, verification, local development, and public-directory boundaries.
+
 ## HYBRD Claude Code Plugin
 
 The [HYBRD Claude Code Plugin](plugins/claude-code) connects Claude Code to HYBRD MCP so you can manage and execute training from Claude Code.
@@ -44,6 +54,10 @@ HYBRD MCP grants your agent profile and workout read/write access. Integration r
 Clone this repository, then load the provider directory you are changing:
 
 ```sh
+# ChatGPT and Codex
+codex plugin marketplace add .
+codex plugin add hybrd@hybrd
+
 # Claude Code
 claude --plugin-dir ./plugins/claude-code
 
@@ -75,6 +89,7 @@ Provider-specific checks:
 ```sh
 npm run validate:claude
 npm run validate:cursor
+npm run validate:openai
 npm run validate:sync
 ```
 

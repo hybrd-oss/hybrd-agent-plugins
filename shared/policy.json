@@ -7,6 +7,20 @@
     "email": "support@hybrd.com"
   },
   "homepage": "https://www.hybrd.com/mcp",
+  "website": "https://www.hybrd.com",
+  "supportUrl": "https://www.hybrd.com/support",
+  "privacyPolicyUrl": "https://www.hybrd.com/privacy",
+  "termsOfServiceUrl": "https://www.hybrd.com/terms",
+  "brandColor": "#1B5E20",
+  "capabilities": [
+    "Read",
+    "Write"
+  ],
+  "defaultPrompts": [
+    "Show my training plan and tell me what to do next.",
+    "Summarize my recent workouts and recovery trends.",
+    "Create a workout that supports my current goal."
+  ],
   "repository": "https://github.com/hybrd-oss/hybrd-agent-plugins",
   "license": "MIT",
   "keywords": [
