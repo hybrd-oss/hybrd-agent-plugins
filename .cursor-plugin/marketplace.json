@@ -5,13 +5,13 @@
     "email": "support@hybrd.com"
   },
   "metadata": {
-    "description": "Official HYBRD plugins for coding agents."
+    "description": "Official HYBRD plugin for Cursor: Garmin, Whoop, Strava and Apple Health training data, plans and workout logging for your AI coach."
   },
   "plugins": [
     {
       "name": "hybrd",
       "source": "plugins/cursor",
-      "description": "The easiest way to manage and execute your training."
+      "description": "Your Garmin, Whoop, Strava and Apple Health training data, plan and history for your AI coach. Log lifts and runs, schedule workouts, and complete them on your watch."
     }
   ]
 }

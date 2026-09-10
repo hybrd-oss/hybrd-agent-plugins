@@ -1,34 +1,57 @@
 # HYBRD Plugin for ChatGPT and Codex
 
-Connect ChatGPT and Codex to HYBRD through HYBRD MCP to manage and execute your fitness goals.
+Your Garmin, Whoop, Strava and Apple Health training data, plan and history for your AI coach. Log lifts and runs, schedule workouts, and complete them on your watch.
 
-Learn more about HYBRD MCP at [hybrd.com/mcp](https://www.hybrd.com/mcp).
+HYBRD is the training system of record for your AI assistant. Connect Garmin, WHOOP, Strava, Apple Health, Hevy and other devices once; ChatGPT can then read your workout history and benchmarks, follow and edit your training plan, log lifts and runs, and schedule workouts you complete on your watch. Built for self-coached athletes training for HYROX, marathons, triathlons and strength goals.
+
+Learn more at [hybrd.com/mcp](https://www.hybrd.com/mcp).
+
+## Devices
+
+Garmin, WHOOP, Strava, Apple Health (via the HYBRD iOS app), Hevy, Strong, Fitbod, StrongLifts, COROS, Oura, Polar, Suunto, Wahoo, Zwift, Fitbit, TrainingPeaks, TrainerRoad, Concept2, and more.
+
+## Try it
+
+- "Show my workouts from this week and what my Garmin recorded."
+- "What's on my training plan today?"
+- "Connect my Whoop and Strava to HYBRD."
+- "Move Thursday's long run to Saturday."
+- "Log today's lift: 5x5 back squat at 100 kg."
+
+## Install
+
+Add the HYBRD marketplace, then install the plugin:
+
+```sh
+git clone https://github.com/hybrd-oss/hybrd-agent-plugins.git
+cd hybrd-agent-plugins
+codex plugin marketplace add .
+codex plugin add hybrd@hybrd
+```
+
+Restart the ChatGPT desktop app, open the Plugins Directory, and enable HYBRD. Complete the HYBRD OAuth sign-in in your browser. That creates or connects your HYBRD account. The iPhone app is not required.
+
+## Verify
+
+Ask "Which HYBRD account am I connected to?" Connection is confirmed only when HYBRD answers with your account. If HYBRD is unavailable after sign-in, start a new conversation, reload the app, or reconnect HYBRD and try again.
+
+## Local development
 
 This portable Agent Plugins package includes:
 
 - The root `plugin.json` manifest used by current plugin hosts.
 - A Streamable HTTP MCP configuration for `https://mcp.hybrd.com/mcp`.
-- A HYBRD skill for account verification and workout/profile workflows.
+- The `hybrd-mcp` skill: account verification, tool routing, and workout, profile, benchmark and integration workflows.
 - A `.codex-plugin/plugin.json` compatibility fallback.
 
-The live MCP tool catalog and schemas are authoritative. ChatGPT and Codex should use the tools discovered for the connected account rather than assuming a fixed capability set.
+The live MCP tool catalog and schemas are authoritative. ChatGPT and Codex should use the tools discovered for the connected account rather than assuming a fixed capability set. Verify the connection with `get_account` before testing any athlete data.
 
-## Install from this repository
-
-From the repository root, add the marketplace and install HYBRD:
+Install from a local checkout:
 
 ```sh
 codex plugin marketplace add .
 codex plugin add hybrd@hybrd
 ```
-
-Restart the ChatGPT desktop app, open the Plugins Directory, and enable HYBRD. Complete the HYBRD OAuth sign-in in your browser.
-
-## Verify
-
-Call `get_account`. Connection is confirmed only when that tool returns successfully. If the tool is unavailable after sign-in, start a new conversation, reload the app, or reconnect HYBRD MCP and try again.
-
-## Local development
 
 After changing the shared skill or policy, regenerate every provider package:
 
