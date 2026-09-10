@@ -2,7 +2,7 @@
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "hybrd",
   "version": "1.1.0",
-  "description": "Your Garmin, Whoop, Strava and Apple Health training data, plan and history for your AI coach. Log lifts and runs, schedule workouts, and complete them on your watch.",
+  "description": "Your Garmin, Whoop, COROS and Apple Health training data, plan and history for your AI coach. Log lifts and runs, schedule workouts, and complete them on your watch.",
   "author": {
     "name": "HYBRD Inc",
     "email": "support@hybrd.com",
@@ -22,7 +22,6 @@
     "workout tracker",
     "garmin",
     "whoop",
-    "strava",
     "apple health",
     "apple watch",
     "coros",
@@ -47,8 +46,8 @@
     "com.openai": {
       "interface": {
         "displayName": "HYBRD",
-        "shortDescription": "Garmin, Whoop and Strava data, training plans and workout logging for your AI coach.",
-        "longDescription": "HYBRD is the training system of record for your AI assistant. Connect Garmin, Whoop, Strava, Apple Health, Hevy and other devices once; ChatGPT can then read your workout history and benchmarks, follow and edit your training plan, log lifts and runs, and schedule workouts you complete on your watch. Built for self-coached athletes training for HYROX, marathons, triathlons and strength goals.",
+        "shortDescription": "Garmin, Whoop and COROS data, training plans and workout logging for your AI coach.",
+        "longDescription": "HYBRD is the training system of record for your AI assistant. Connect Garmin, Whoop, COROS, Apple Health, Hevy and other devices once; ChatGPT can then read your workout history and benchmarks, follow and edit your training plan, log lifts and runs, and schedule workouts you complete on your watch. Built for self-coached athletes training for HYROX, marathons, triathlons and strength goals.",
         "developerName": "HYBRD Inc",
         "category": "Health & Fitness",
         "capabilities": [
@@ -61,7 +60,7 @@
         "defaultPrompt": [
           "Show my workouts from this week and what my Garmin recorded.",
           "What's on my training plan today?",
-          "Connect my Whoop and Strava to HYBRD.",
+          "Connect my Whoop and COROS to HYBRD.",
           "Move Thursday's long run to Saturday.",
           "Log today's lift: 5x5 back squat at 100 kg."
         ],

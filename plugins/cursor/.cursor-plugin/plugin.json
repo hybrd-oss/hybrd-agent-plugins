@@ -1,7 +1,7 @@
 {
   "name": "hybrd",
   "version": "1.1.0",
-  "description": "Your Garmin, Whoop, Strava and Apple Health training data, plan and history for your AI coach. Log lifts and runs, schedule workouts, and complete them on your watch.",
+  "description": "Your Garmin, Whoop, COROS and Apple Health training data, plan and history for your AI coach. Log lifts and runs, schedule workouts, and complete them on your watch.",
   "author": {
     "name": "HYBRD Inc",
     "email": "support@hybrd.com"
@@ -20,7 +20,6 @@
     "workout tracker",
     "garmin",
     "whoop",
-    "strava",
     "apple health",
     "apple watch",
     "coros",

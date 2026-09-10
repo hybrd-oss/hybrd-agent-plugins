@@ -5,13 +5,13 @@
     "email": "support@hybrd.com"
   },
   "metadata": {
-    "description": "Official HYBRD plugin for Cursor. Give Cursor your Garmin, Whoop, Strava and Apple Health training data, plans and workout log."
+    "description": "Official HYBRD plugin for Cursor. Give Cursor your Garmin, Whoop, COROS and Apple Health training data, plans and workout log."
   },
   "plugins": [
     {
       "name": "hybrd",
       "source": "plugins/cursor",
-      "description": "Give Cursor your Garmin, Whoop, Strava and Apple Health training data, plan and history. Log lifts and runs, schedule workouts, and complete them on your watch."
+      "description": "Give Cursor your Garmin, Whoop, COROS and Apple Health training data, plan and history. Log lifts and runs, schedule workouts, and complete them on your watch."
     }
   ]
 }

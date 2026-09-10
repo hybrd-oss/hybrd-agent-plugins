@@ -1,20 +1,20 @@
 # HYBRD Plugin for ChatGPT and Codex
 
-Your Garmin, Whoop, Strava and Apple Health training data, plan and history for your AI coach. Log lifts and runs, schedule workouts, and complete them on your watch.
+Your Garmin, Whoop, COROS and Apple Health training data, plan and history for your AI coach. Log lifts and runs, schedule workouts, and complete them on your watch.
 
-HYBRD is the training system of record for your AI assistant. Connect Garmin, WHOOP, Strava, Apple Health, Hevy and other devices once; ChatGPT can then read your workout history and benchmarks, follow and edit your training plan, log lifts and runs, and schedule workouts you complete on your watch. Built for self-coached athletes training for HYROX, marathons, triathlons and strength goals.
+HYBRD is the training system of record for your AI assistant. Connect Garmin, WHOOP, COROS, Apple Health, Hevy and other devices once; ChatGPT can then read your workout history and benchmarks, follow and edit your training plan, log lifts and runs, and schedule workouts you complete on your watch. Built for self-coached athletes training for HYROX, marathons, triathlons and strength goals.
 
 Learn more at [hybrd.com/mcp](https://www.hybrd.com/mcp).
 
 ## Devices
 
-Garmin, WHOOP, Strava, Apple Health (via the HYBRD iOS app), Hevy, Strong, Fitbod, StrongLifts, COROS, Oura, Polar, Suunto, Wahoo, Zwift, Fitbit, TrainingPeaks, TrainerRoad, Concept2, and more.
+Garmin, WHOOP, COROS, Apple Health (via the HYBRD iOS app), Hevy, Strong, Fitbod, StrongLifts, Oura, Polar, Suunto, Wahoo, Zwift, Fitbit, TrainingPeaks, TrainerRoad, Concept2, and more.
 
 ## Try it
 
 - "Show my workouts from this week and what my Garmin recorded."
 - "What's on my training plan today?"
-- "Connect my Whoop and Strava to HYBRD."
+- "Connect my Whoop and COROS to HYBRD."
 - "Move Thursday's long run to Saturday."
 - "Log today's lift: 5x5 back squat at 100 kg."
 
