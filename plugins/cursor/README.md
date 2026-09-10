@@ -29,7 +29,7 @@ HYBRD MCP grants your AI assistant profile, workout, benchmark and integration r
 
 ## Install
 
-Once this plugin is available in Cursor Marketplace, open **Customize**, find **HYBRD**, and install it at user or project scope. Enable the HYBRD MCP server and complete the HYBRD OAuth sign-in in your browser.
+Open **Customize**, find **HYBRD**, and install it at user or project scope. Enable the HYBRD MCP server and complete the HYBRD OAuth sign-in in your browser.
 
 Sign in to HYBRD during connection to create or access your account. The iPhone app is not required.
 
