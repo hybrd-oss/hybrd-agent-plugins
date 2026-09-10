@@ -8,7 +8,7 @@ This plugin lives in the [HYBRD agent plugins](https://github.com/hybrd-oss/hybr
 
 ## Why use it
 
-HYBRD MCP brings your fitness plan, workout history and logger, profile, and wearable connections into one place. HYBRD is the training system of record for your AI assistant. Connect Apple Watch, Garmin, WHOOP, COROS, Hevy and other devices once; Cursor can then read your workout history and benchmarks, follow and edit your training plan, log lifts and runs, and schedule workouts you complete on your watch. As you complete training, HYBRD adapts the weights and paces prescribed in future sessions.
+HYBRD MCP makes it easy to manage and execute fitness goals. It brings your fitness plan, workout history and logger, profile, and wearable connections into one place, so Cursor can coach you from your real training instead of guesses. Connect Apple Watch, Garmin, WHOOP, COROS, Hevy and other devices once; Cursor can then read your workout history and benchmarks, follow and edit your training plan, log lifts and runs, and schedule workouts you complete on your watch. As you complete training, HYBRD adapts the weights and paces prescribed in future sessions.
 
 ## What you can use it for
 
