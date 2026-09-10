@@ -1,6 +1,6 @@
 # HYBRD Cursor Plugin
 
-Your Garmin, Whoop, COROS and Apple Health training data, plan and history for your AI coach. Log lifts and runs, schedule workouts, and complete them on your watch.
+Your Apple Watch, Garmin, Whoop and COROS training data, plan and history for your AI coach. Log lifts and runs, schedule workouts, and complete them on your watch.
 
 Learn more about HYBRD MCP at [hybrd.com/mcp](https://www.hybrd.com/mcp).
 
@@ -8,14 +8,14 @@ This plugin lives in the [HYBRD agent plugins](https://github.com/hybrd-oss/hybr
 
 ## Why use it
 
-HYBRD MCP brings your fitness plan, workout history and logger, profile, and wearable connections into one place. HYBRD is the training system of record for your AI assistant. Connect Garmin, WHOOP, COROS, Apple Health, Hevy and other devices once; Cursor can then read your workout history and benchmarks, follow and edit your training plan, log lifts and runs, and schedule workouts you complete on your watch. As you complete training, HYBRD adapts the weights and paces prescribed in future sessions.
+HYBRD MCP brings your fitness plan, workout history and logger, profile, and wearable connections into one place. HYBRD is the training system of record for your AI assistant. Connect Apple Watch, Garmin, WHOOP, COROS, Hevy and other devices once; Cursor can then read your workout history and benchmarks, follow and edit your training plan, log lifts and runs, and schedule workouts you complete on your watch. As you complete training, HYBRD adapts the weights and paces prescribed in future sessions.
 
 ## What you can use it for
 
 - Follow, edit and reschedule your training plan.
 - Log lifts and runs, or complete scheduled workouts as written or with changes.
 - Track PRs, 1RMs and benchmarks and let future sessions adapt.
-- Connect Garmin, WHOOP, COROS, Hevy, Oura, Polar and more. Apple Health syncs through the HYBRD iOS app.
+- Connect Apple Watch (via the HYBRD iOS app), Garmin, WHOOP, COROS, Hevy, Oura, Polar and more.
 - Verify the connected account before using athlete data, then clearly report any change.
 
 The live MCP tool catalog and schemas are authoritative: use the tools Cursor discovers for the connected account rather than assuming a fixed capability set.

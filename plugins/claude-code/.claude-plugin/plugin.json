@@ -2,7 +2,7 @@
   "name": "hybrd",
   "displayName": "HYBRD",
   "version": "1.1.0",
-  "description": "Your Garmin, Whoop, COROS and Apple Health training data, plan and history for your AI coach. Log lifts and runs, schedule workouts, and complete them on your watch.",
+  "description": "Your Apple Watch, Garmin, Whoop and COROS training data, plan and history for your AI coach. Log lifts and runs, schedule workouts, and complete them on your watch.",
   "author": {
     "name": "HYBRD Inc",
     "email": "support@hybrd.com"
@@ -36,11 +36,11 @@
     "crossfit",
     "benchmarks",
     "1rm",
+    "apple watch",
+    "apple health",
     "garmin",
     "whoop",
     "coros",
-    "apple health",
-    "apple watch",
     "oura",
     "polar",
     "fitbit",

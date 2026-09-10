@@ -2,13 +2,13 @@
 
 [![CI](https://github.com/hybrd-oss/hybrd-agent-plugins/actions/workflows/validate.yml/badge.svg)](https://github.com/hybrd-oss/hybrd-agent-plugins/actions/workflows/validate.yml)
 
-Your Garmin, Whoop, COROS and Apple Health training data, plan and history for your AI coach. Log lifts and runs, schedule workouts, and complete them on your watch.
+Your Apple Watch, Garmin, Whoop and COROS training data, plan and history for your AI coach. Log lifts and runs, schedule workouts, and complete them on your watch.
 
 HYBRD MCP brings your fitness plan, workout history and logger, profile, and wearable connections into one place. Built for self-coached athletes who use ChatGPT, Claude or Cursor as their coach. Connect your devices once and your AI assistant can read your workout history and benchmarks, follow and edit your training plan, log lifts and runs, and schedule workouts you finish on your watch. Learn more at [hybrd.com/mcp](https://www.hybrd.com/mcp).
 
 ## Devices
 
-Garmin, WHOOP, COROS, Apple Health (via the HYBRD iOS app), Hevy, Strong, Fitbod, StrongLifts, Oura, Polar, Suunto, Wahoo, Zwift, Fitbit, TrainingPeaks, TrainerRoad, Concept2, and more.
+Apple Watch (via the HYBRD iOS app), Garmin, WHOOP, COROS, Hevy, Strong, Fitbod, StrongLifts, Oura, Polar, Suunto, Wahoo, Zwift, Fitbit, TrainingPeaks, TrainerRoad, Concept2, and more.
 
 ## Install
 
