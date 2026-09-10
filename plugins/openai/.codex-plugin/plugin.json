@@ -69,10 +69,8 @@
     "privacyPolicyURL": "https://www.hybrd.com/privacy",
     "termsOfServiceURL": "https://www.hybrd.com/terms",
     "defaultPrompt": [
-      "Show my workouts from this week and what my Garmin recorded.",
+      "Show my workouts from this week and what my watch recorded.",
       "What's on my training plan today?",
-      "Connect my Whoop and COROS to HYBRD.",
-      "Move Thursday's long run to Saturday.",
       "Log today's lift: 5x5 back squat at 100 kg."
     ],
     "brandColor": "#1B5E20",
