@@ -19,16 +19,16 @@ Use HYBRD MCP only after the athlete has completed the HYBRD OAuth sign-in in Ch
 
 ## Which tool for which ask
 
-- Past workouts, this week, what my watch recorded → `list_workouts`, then `get_completed_workout` for detail
-- Today's or an upcoming session → `list_workouts`, then `get_scheduled_workout`
-- Plan, goal, phase, what a week is for → `get_plan_outline`
-- "I did the workout as written" → `complete_scheduled_workout`
-- "I did it but changed X" → `complete_scheduled_workout`, then `update_completed_workout`
-- Log a lift or run that wasn't planned → `search_exercises`, then `create_workout`
+- Show past workouts, this week, or what my watch recorded → `list_workouts`, then `get_completed_workout` for detail
+- Show today's or an upcoming session → `list_workouts`, then `get_scheduled_workout`
+- Explain the plan, goal, phase, or what a week is for → `get_plan_outline`
+- Complete the workout as written → `complete_scheduled_workout`
+- Complete the workout with changes → `complete_scheduled_workout`, then `update_completed_workout`
+- Log an unplanned lift or run → `search_exercises`, then `create_workout`
 - Move or edit an upcoming workout → `get_scheduled_workout`, then `update_scheduled_workout`
-- New PR, max, or test result → `list_benchmarks`, then `upsert_benchmarks`
-- Body weight, units, single-sided logging, goals → `get_profile`, then `update_profile`
+- Record a new PR, max, or test result → `list_benchmarks`, then `upsert_benchmarks`
+- Update body weight, units, single-sided logging, or goals → `get_profile`, then `update_profile`
 - Connect or check a device (Garmin, WHOOP, COROS, Hevy…) → `list_integrations`, then `connect_integration`
-- Which account, is it connected, is the subscription active → `get_account`
+- Check which account is connected or whether the subscription is active → `get_account`
 
 After completing or logging a workout, close the loop: confirm what was saved and say what's next on the plan.
