@@ -2,7 +2,7 @@
 
 Your Garmin, Whoop, COROS and Apple Health training data, plan and history for your AI coach. Log lifts and runs, schedule workouts, and complete them on your watch.
 
-HYBRD is the training system of record for your AI assistant. Connect Garmin, WHOOP, COROS, Apple Health, Hevy and other devices once; ChatGPT can then read your workout history and benchmarks, follow and edit your training plan, log lifts and runs, and schedule workouts you complete on your watch. Built for self-coached athletes training for HYROX, marathons, triathlons and strength goals.
+HYBRD MCP brings your fitness plan, workout history and logger, profile, and wearable connections into one place. HYBRD is the training system of record for your AI assistant. Connect Garmin, WHOOP, COROS, Apple Health, Hevy and other devices once; ChatGPT can then read your workout history and benchmarks, follow and edit your training plan, log lifts and runs, and schedule workouts you complete on your watch. Built for self-coached athletes training for HYROX, marathons, triathlons and strength goals.
 
 Learn more at [hybrd.com/mcp](https://www.hybrd.com/mcp).
 

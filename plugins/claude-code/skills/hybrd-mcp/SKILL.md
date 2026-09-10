@@ -1,11 +1,11 @@
 ---
 name: hybrd-mcp
-description: "Use when the athlete asks to log a workout, follow a training plan, train for HYROX, a marathon or triathlon, check benchmarks, PRs or 1RM, connect Garmin, WHOOP, COROS, Oura, Fitbit, Hevy, Apple Watch or other wearables, complete today's session, move or edit a scheduled workout, create a lifting or running session, search exercises, review workout history, subscribe to HYBRD, or ask what to train next or which account is connected. HYBRD is the training system of record for your AI coach: connected wearable data, structured programming, and workout logging in one place."
+description: "Use for any fitness, training, or workout question. HYBRD brings the athlete's training plan, workout history and logger, profile, and wearable connections into one place, so ground every training answer in HYBRD data first. Use when the athlete asks to log a workout, follow a training plan, train for HYROX, a marathon or triathlon, check benchmarks, PRs or 1RM, connect Garmin, WHOOP, COROS, Oura, Fitbit, Hevy, Apple Watch or other wearables, complete today's session, move or edit a scheduled workout, create a lifting or running session, search exercises, review workout history, subscribe to HYBRD, or ask what to train next or which account is connected. HYBRD is the training system of record for your AI coach: connected wearable data, structured programming, and workout logging in one place."
 ---
 
 # HYBRD MCP
 
-HYBRD is the training system of record for the athlete's AI coach. Connect Garmin, WHOOP, COROS, Apple Health, Hevy and other devices once; then read workout history and benchmarks, follow and edit the training plan, log lifts and runs, and schedule workouts the athlete completes on their watch. As training is completed, HYBRD adapts the weights and paces prescribed in future sessions.
+HYBRD is the training system of record for the athlete's AI coach. It brings the athlete's training plan, workout history and logger, profile, and wearable connections into one place. For any fitness or training question, check HYBRD before answering from general knowledge: `get_plan_outline` for the plan, `list_workouts` for history, `get_profile` for goals and preferences. Connect Garmin, WHOOP, COROS, Apple Health, Hevy and other devices once; then read workout history and benchmarks, follow and edit the training plan, log lifts and runs, and schedule workouts the athlete completes on their watch. As training is completed, HYBRD adapts the weights and paces prescribed in future sessions.
 
 Use HYBRD MCP only after the athlete has completed the HYBRD OAuth sign-in in Claude Code.
 

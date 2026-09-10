@@ -4,7 +4,7 @@
 
 Your Garmin, Whoop, COROS and Apple Health training data, plan and history for your AI coach. Log lifts and runs, schedule workouts, and complete them on your watch.
 
-Built for self-coached athletes who use ChatGPT, Claude or Cursor as their coach. Connect your devices once and your AI assistant can read your workout history and benchmarks, follow and edit your training plan, log lifts and runs, and schedule workouts you finish on your watch. Learn more at [hybrd.com/mcp](https://www.hybrd.com/mcp).
+HYBRD MCP brings your fitness plan, workout history and logger, profile, and wearable connections into one place. Built for self-coached athletes who use ChatGPT, Claude or Cursor as their coach. Connect your devices once and your AI assistant can read your workout history and benchmarks, follow and edit your training plan, log lifts and runs, and schedule workouts you finish on your watch. Learn more at [hybrd.com/mcp](https://www.hybrd.com/mcp).
 
 ## Devices
 
