@@ -1,6 +1,6 @@
 ---
 name: hybrd-mcp
-description: "Use when the athlete asks to log a workout, follow a training plan, train for HYROX, a marathon or triathlon, check benchmarks, PRs or 1RM, connect Garmin, WHOOP, COROS, Hevy or Apple Watch, complete today's session, move or edit a scheduled workout, create a lifting or running session, search exercises, update profile or body weight, review workout history, subscribe to HYBRD, or ask what to train next or which account is connected. HYBRD is the training system of record for your AI coach: connected wearable data, structured programming, and workout logging in one place."
+description: "Use when the athlete asks to log a workout, follow a training plan, train for HYROX, a marathon or triathlon, check benchmarks, PRs or 1RM, connect Garmin, WHOOP, COROS, Oura, Fitbit, Hevy, Apple Watch or other wearables, complete today's session, move or edit a scheduled workout, create a lifting or running session, search exercises, review workout history, subscribe to HYBRD, or ask what to train next or which account is connected. HYBRD is the training system of record for your AI coach: connected wearable data, structured programming, and workout logging in one place."
 ---
 
 # HYBRD MCP
