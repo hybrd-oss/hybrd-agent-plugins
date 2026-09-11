@@ -2,52 +2,62 @@
 
 [![CI](https://github.com/hybrd-oss/hybrd-agent-plugins/actions/workflows/validate.yml/badge.svg)](https://github.com/hybrd-oss/hybrd-agent-plugins/actions/workflows/validate.yml)
 
-Official HYBRD plugins that connect coding agents to [HYBRD MCP](https://www.hybrd.com/mcp).
+Your Apple Watch, Garmin, Whoop and COROS training data, plan and history for your AI coach. Log lifts and runs, schedule workouts, and complete them on your watch.
+
+HYBRD MCP makes it easy to manage and execute fitness goals. It brings your fitness plan, workout history and logger, profile, and wearable connections into one place, so your AI can coach you from your real training instead of guesses. Built for self-coached athletes who use ChatGPT, Claude or Cursor as their coach. Connect your devices once and your AI can read your workout history and benchmarks, follow and edit your training plan, log lifts and runs, and schedule workouts you finish on your watch. Learn more at [hybrd.com/mcp](https://www.hybrd.com/mcp).
+
+## Devices
+
+Apple Watch (via the HYBRD iOS app), Garmin, WHOOP, COROS, Hevy, Strong, Fitbod, StrongLifts, Oura, Polar, Suunto, Wahoo, Zwift, Fitbit, TrainingPeaks, TrainerRoad, Concept2, and more.
+
+## Install
+
+**ChatGPT and Codex**
+
+```sh
+git clone https://github.com/hybrd-oss/hybrd-agent-plugins.git
+cd hybrd-agent-plugins
+codex plugin marketplace add .
+codex plugin add hybrd@hybrd
+```
+
+**Claude Code**
+
+```sh
+claude plugin marketplace add hybrd-oss/hybrd-agent-plugins
+claude plugin install hybrd@hybrd
+```
+
+**Cursor**
+
+Open **Customize**, find **HYBRD**, and install it. Then enable the HYBRD MCP server.
+
+Each host will prompt you to sign in to HYBRD in your browser. That creates or connects your account. The iPhone app is not required.
+
+## Try it
+
+- "Show my workouts from this week and what my Garmin recorded."
+- "What's on my training plan today?"
+- "Connect my Whoop and COROS to HYBRD."
+- "Move Thursday's long run to Saturday."
+- "Log today's lift: 5x5 back squat at 100 kg."
+
+## Repository layout
 
 This repository is a monorepo of provider plugins. Each plugin is a standalone package with its own manifest, MCP configuration, and install path.
 
-## HYBRD ChatGPT and Codex Plugin
-
-The [HYBRD OpenAI Plugin](plugins/openai) connects ChatGPT and Codex to HYBRD MCP so you can manage and execute training from either product.
-
-- Marketplace manifest: `.agents/plugins/marketplace.json`
-- Plugin directory: `plugins/openai`
-- Skill: `hybrd-mcp`
-
-See the [OpenAI plugin README](plugins/openai/README.md) for installation, verification, local development, and public-directory boundaries.
-
-## HYBRD Claude Code Plugin
-
-The [HYBRD Claude Code Plugin](plugins/claude-code) connects Claude Code to HYBRD MCP so you can manage and execute training from Claude Code.
-
-- Marketplace manifest: `.claude-plugin/marketplace.json`
-- Plugin directory: `plugins/claude-code`
-- Skill: `hybrd-mcp`
-
-See the [Claude Code plugin README](plugins/claude-code/README.md) for install, verification, and local development.
-
-## HYBRD Cursor Plugin
-
-The [HYBRD Cursor Plugin](plugins/cursor) connects Cursor to HYBRD MCP so you can manage and execute training from Cursor.
-
-- Marketplace manifest: `.cursor-plugin/marketplace.json`
-- Plugin directory: `plugins/cursor`
-- Skill: `hybrd-mcp`
-
-See the [Cursor plugin README](plugins/cursor/README.md) for install, verification, and local development.
-
-## Why use HYBRD MCP
-
-HYBRD MCP brings your fitness plan, workout history and logger, profile, and wearable connections into one place. It helps you get guidance grounded in your real training, ask better questions about what to do next, and turn recommendations into structured workouts and programming. As you complete training, HYBRD automatically adapts the weights and paces prescribed in future sessions.
-
-## What it includes
+| Host | Plugin directory | Marketplace manifest | README |
+| --- | --- | --- | --- |
+| ChatGPT and Codex | `plugins/openai` | `.agents/plugins/marketplace.json` | [OpenAI plugin](plugins/openai/README.md) |
+| Claude Code | `plugins/claude-code` | `.claude-plugin/marketplace.json` | [Claude Code plugin](plugins/claude-code/README.md) |
+| Cursor | `plugins/cursor` | `.cursor-plugin/marketplace.json` | [Cursor plugin](plugins/cursor/README.md) |
 
 Each provider plugin ships:
 
 - A remote MCP server configuration for `https://mcp.hybrd.com/mcp`.
-- A HYBRD skill for account verification and workout/profile workflows.
+- The `hybrd-mcp` skill: account verification, tool routing, and workout, profile, benchmark and integration workflows.
 
-HYBRD MCP grants your agent profile and workout read/write access. Integration read/write access is coming soon.
+HYBRD MCP grants your AI assistant profile, workout, benchmark and integration read/write access. Available tools and schemas come from the live HYBRD MCP server.
 
 ## Local development
 
@@ -68,13 +78,13 @@ ln -s "$(pwd)/plugins/cursor" ~/.cursor/plugins/local/hybrd
 
 Do not symlink or pass the repository root as a plugin directory. Cursor and Claude Code both expect the individual plugin folder that contains the provider manifest.
 
-Shared skills live in `shared/hybrd-mcp.SKILL.md`. Copy them into every provider plugin with:
+Shared metadata lives in `shared/policy.json` and the shared skill in `shared/hybrd-mcp.SKILL.md`. Copy them into every provider plugin with:
 
 ```sh
 npm run sync
 ```
 
-A pre-commit hook runs that copy step and stages the generated skill files. Enable the hook once with `npm run prepare`, or `git config core.hooksPath .githooks`. CI still fails if generated skills are stale.
+A pre-commit hook runs that copy step and stages the generated files. Enable the hook once with `npm run prepare`, or `git config core.hooksPath .githooks`. CI still fails if generated files are stale.
 
 READMEs and other provider prose can differ and are not overwritten.
 

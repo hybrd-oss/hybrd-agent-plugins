@@ -48,9 +48,8 @@ const skillTemplate = readText('shared/hybrd-mcp.SKILL.md');
 
 const openAiInterface = {
   displayName: policy.displayName,
-  shortDescription: policy.description,
-  longDescription:
-    'Connect ChatGPT and Codex to HYBRD for authenticated workout history, training plans, profile data, and supported wearable workflows. Available tools and schemas come from the live HYBRD MCP server.',
+  shortDescription: policy.shortDescription,
+  longDescription: policy.longDescription,
   developerName: policy.author.name,
   category: 'Health & Fitness',
   capabilities: policy.capabilities,

@@ -1,20 +1,21 @@
 # HYBRD Claude Code Plugin
 
-Connect Claude Code to HYBRD through HYBRD MCP to manage and execute your fitness goals.
+Your Apple Watch, Garmin, Whoop and COROS training data, plan and history for your AI coach. Log lifts and runs, schedule workouts, and complete them on your watch.
 
 Learn more about HYBRD MCP at [hybrd.com/mcp](https://www.hybrd.com/mcp).
 
-This plugin lives in the [HYBRD agent plugins](https://github.com/hybrd-oss/hybrd-agent-plugins) monorepo. See the [Cursor plugin](../cursor/README.md) for the Cursor package.
+This plugin lives in the [HYBRD agent plugins](https://github.com/hybrd-oss/hybrd-agent-plugins) monorepo. See the [Cursor plugin](../cursor/README.md) and [OpenAI plugin](../openai/README.md) for the other hosts.
 
 ## Why use it
 
-HYBRD MCP brings your fitness plan, workout history and logger, profile, and wearable connections into one place. It helps you get guidance grounded in your real training, ask better questions about what to do next, and turn recommendations into structured workouts and programming. As you complete training, HYBRD automatically adapts the weights and paces prescribed in future sessions.
+HYBRD MCP makes it easy to manage and execute fitness goals. It brings your fitness plan, workout history and logger, profile, and wearable connections into one place, so Claude Code can coach you from your real training instead of guesses. Connect Apple Watch, Garmin, WHOOP, COROS, Hevy and other devices once; Claude Code can then read your workout history and benchmarks, follow and edit your training plan, log lifts and runs, and schedule workouts you complete on your watch. As you complete training, HYBRD adapts the weights and paces prescribed in future sessions.
 
 ## What you can use it for
 
-- Create and manage fitness plans and structured workouts when the live MCP tools support it.
-- Use workout history, logging, and wearable context to make training decisions.
-- Track lifting and running in HYBRD, or complete workouts on an Apple Watch, Garmin, and other connected devices.
+- Follow, edit and reschedule your training plan.
+- Log lifts and runs, or complete scheduled workouts as written or with changes.
+- Track PRs, 1RMs and benchmarks and let future sessions adapt.
+- Connect Apple Watch (via the HYBRD iOS app), Garmin, WHOOP, COROS, Hevy, Oura, Polar and more.
 - Verify the connected account before using athlete data, then clearly report any change.
 
 The live MCP tool catalog and schemas are authoritative: use the tools Claude Code discovers for the connected account rather than assuming a fixed capability set.
@@ -22,9 +23,9 @@ The live MCP tool catalog and schemas are authoritative: use the tools Claude Co
 ## What it includes
 
 - A remote MCP server configuration for `https://mcp.hybrd.com/mcp`.
-- A HYBRD skill for account verification and workout/profile workflows.
+- The `hybrd-mcp` skill: account verification, tool routing, and workout, profile, benchmark and integration workflows.
 
-HYBRD MCP grants your agent profile and workout read/write access. Integration read/write access is coming soon.
+HYBRD MCP grants your AI assistant profile, workout, benchmark and integration read/write access.
 
 ## Install
 

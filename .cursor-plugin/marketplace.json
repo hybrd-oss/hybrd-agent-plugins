@@ -5,13 +5,13 @@
     "email": "support@hybrd.com"
   },
   "metadata": {
-    "description": "Official HYBRD plugins for coding agents."
+    "description": "Official HYBRD plugin for Cursor. Give Cursor your Apple Watch, Garmin, Whoop and COROS training data, training preferences, injury history, and more so that it can be a best-in-class coach and push workouts to your devices."
   },
   "plugins": [
     {
       "name": "hybrd",
       "source": "plugins/cursor",
-      "description": "The easiest way to manage and execute your training."
+      "description": "Give Cursor your Apple Watch, Garmin, Whoop and COROS training data, training preferences, injury history, and more so that it can be a best-in-class coach and push workouts to your devices."
     }
   ]
 }
