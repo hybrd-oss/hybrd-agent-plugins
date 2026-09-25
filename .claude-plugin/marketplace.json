@@ -6,13 +6,13 @@
     "url": "https://www.hybrd.com"
   },
   "metadata": {
-    "description": "Apple Watch, Garmin and Whoop data, training plans and workout logging for your AI coach."
+    "description": "Official HYBRD plugin for Claude Code. Give Claude Code your Apple Watch, Garmin, Whoop and COROS training data, training preferences, injury history, and more so that it can be a best-in-class coach and push workouts to your devices."
   },
   "plugins": [
     {
       "name": "hybrd",
       "source": "./plugins/claude-code",
-      "description": "Apple Watch, Garmin and Whoop data, training plans and workout logging for your AI coach.",
+      "description": "Give Claude Code your Apple Watch, Garmin, Whoop and COROS training data, training preferences, injury history, and more so that it can be a best-in-class coach and push workouts to your devices.",
       "keywords": [
         "fitness", "workout", "workouts", "training", "training plan", "workout log",
         "workout tracker", "workout planner", "ai coach", "fitness coach", "running coach",

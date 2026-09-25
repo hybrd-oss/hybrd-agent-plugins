@@ -49,5 +49,8 @@
     "wearables",
     "hybrd",
     "mcp"
-  ]
+  ],
+  "icon": "./.claude-plugin/icon.png",
+  "privacyPolicyUrl": "https://www.hybrd.com/privacy",
+  "termsOfServiceUrl": "https://www.hybrd.com/terms"
 }

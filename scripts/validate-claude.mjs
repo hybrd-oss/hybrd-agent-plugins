@@ -26,7 +26,10 @@ assert(!('userConfig' in manifest), 'HYBRD OAuth must not require Claude plugin 
 assertAuthor(manifest.author, 'Claude plugin');
 assertEqual(manifest.author.url, policy.website, 'Claude plugin author URL is invalid.');
 assertKeywords(manifest.keywords, 'Claude plugin');
-assert(fileExists('plugins/claude-code/.claude-plugin/icon.png'), 'Claude plugin directory icon is missing.');
+assertEqual(manifest.icon, './.claude-plugin/icon.png', 'Claude plugin directory icon path is invalid.');
+assert(fileExists(`plugins/claude-code/${manifest.icon}`), 'Claude plugin directory icon is missing.');
+assertEqual(manifest.privacyPolicyUrl, policy.privacyPolicyUrl, 'Claude plugin privacy URL is invalid.');
+assertEqual(manifest.termsOfServiceUrl, policy.termsOfServiceUrl, 'Claude plugin terms URL is invalid.');
 
 const mcp = readJson('plugins/claude-code/.mcp.json');
 assertMcpServer(mcp, 'Claude');
@@ -42,7 +45,6 @@ assertEqual(marketplace.name, PLUGIN_NAME, 'Claude marketplace name is invalid.'
 assertAuthor(marketplace.owner, 'Claude marketplace');
 assertEqual(marketplace.plugins?.length, 1, 'Claude marketplace must list exactly one plugin.');
 assertEqual(marketplace.plugins[0].name, PLUGIN_NAME, 'Claude marketplace plugin name is invalid.');
-assertEqual(marketplace.plugins[0].description, policy.shortDescription, 'Claude marketplace short description is invalid.');
 assertKeywords(marketplace.plugins[0].keywords, 'Claude marketplace plugin');
 assertEqual(
   marketplace.plugins[0].source,

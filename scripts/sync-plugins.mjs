@@ -88,6 +88,11 @@ export const generatedFiles = () => {
       repository: policy.repository,
       license: policy.license,
       keywords: policy.keywords,
+      ...(provider.product === 'Claude Code' ? {
+        icon: './.claude-plugin/icon.png',
+        privacyPolicyUrl: policy.privacyPolicyUrl,
+        termsOfServiceUrl: policy.termsOfServiceUrl,
+      } : {}),
       ...Object.fromEntries(Object.entries(provider.manifestFields).filter(([key]) => key !== 'displayName')),
     });
   }
