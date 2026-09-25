@@ -10,6 +10,7 @@ import {
   isSemver,
   LICENSE,
   PLUGIN_NAME,
+  policy,
   readJson,
   readText,
 } from './shared.mjs';
@@ -23,7 +24,9 @@ assertEqual(manifest.license, LICENSE, 'Claude plugin license is invalid.');
 assert(!('variables' in manifest), 'HYBRD OAuth must not require Claude plugin variables.');
 assert(!('userConfig' in manifest), 'HYBRD OAuth must not require Claude plugin userConfig.');
 assertAuthor(manifest.author, 'Claude plugin');
+assertEqual(manifest.author.url, policy.website, 'Claude plugin author URL is invalid.');
 assertKeywords(manifest.keywords, 'Claude plugin');
+assert(fileExists('plugins/claude-code/.claude-plugin/icon.png'), 'Claude plugin directory icon is missing.');
 
 const mcp = readJson('plugins/claude-code/.mcp.json');
 assertMcpServer(mcp, 'Claude');
@@ -39,6 +42,8 @@ assertEqual(marketplace.name, PLUGIN_NAME, 'Claude marketplace name is invalid.'
 assertAuthor(marketplace.owner, 'Claude marketplace');
 assertEqual(marketplace.plugins?.length, 1, 'Claude marketplace must list exactly one plugin.');
 assertEqual(marketplace.plugins[0].name, PLUGIN_NAME, 'Claude marketplace plugin name is invalid.');
+assertEqual(marketplace.plugins[0].description, policy.shortDescription, 'Claude marketplace short description is invalid.');
+assertKeywords(marketplace.plugins[0].keywords, 'Claude marketplace plugin');
 assertEqual(
   marketplace.plugins[0].source,
   './plugins/claude-code',

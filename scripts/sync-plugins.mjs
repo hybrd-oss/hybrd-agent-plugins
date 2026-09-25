@@ -83,7 +83,7 @@ export const generatedFiles = () => {
       ...(provider.manifestFields.displayName ? { displayName: provider.manifestFields.displayName } : {}),
       version: existing.version,
       description: policy.description,
-      author: policy.author,
+      author: provider.product === 'Claude Code' ? { ...policy.author, url: policy.website } : policy.author,
       homepage: policy.homepage,
       repository: policy.repository,
       license: policy.license,

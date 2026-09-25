@@ -5,7 +5,8 @@
   "description": "Your Apple Watch, Garmin, Whoop and COROS training data, plan and history for your AI coach. Log lifts and runs, schedule workouts, and complete them on your watch.",
   "author": {
     "name": "HYBRD Inc",
-    "email": "support@hybrd.com"
+    "email": "support@hybrd.com",
+    "url": "https://www.hybrd.com"
   },
   "homepage": "https://www.hybrd.com/mcp",
   "repository": "https://github.com/hybrd-oss/hybrd-agent-plugins",
