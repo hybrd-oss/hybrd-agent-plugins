@@ -82,7 +82,9 @@ Complete OAuth and verify with `get_account` before testing any athlete data.
 
 ## Support
 
-For help, visit [HYBRD Support](https://www.hybrd.com/support). Review the [Privacy Policy](https://www.hybrd.com/privacy) and [Terms](https://www.hybrd.com/terms).
+- Support: https://www.hybrd.com/support
+- Privacy policy: https://www.hybrd.com/privacy
+- Terms of service: https://www.hybrd.com/terms
 
 ## License
 
